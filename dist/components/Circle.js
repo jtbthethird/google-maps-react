@@ -102,7 +102,7 @@
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
   }
 
-  var evtNames = ['click', 'mouseout', 'mouseover'];
+  var evtNames = ['click', 'mouseout', 'mouseover', 'radius_changed', 'center_changed'];
 
   var wrappedPromise = function wrappedPromise() {
     var wrappedPromise = {},
@@ -183,6 +183,7 @@
             map = _props2.map,
             google = _props2.google,
             center = _props2.center,
+            editable = _props2.editable,
             radius = _props2.radius,
             strokeColor = _props2.strokeColor,
             strokeOpacity = _props2.strokeOpacity,
@@ -203,6 +204,7 @@
           radius: radius,
           draggable: draggable,
           visible: visible,
+          editable: editable,
           options: {
             strokeColor: strokeColor,
             strokeOpacity: strokeOpacity,
@@ -249,6 +251,7 @@
 
   Circle.propTypes = {
     center: _propTypes2.default.object,
+    editable: _propTypes2.default.bool,
     radius: _propTypes2.default.number,
     strokeColor: _propTypes2.default.string,
     strokeOpacity: _propTypes2.default.number,
